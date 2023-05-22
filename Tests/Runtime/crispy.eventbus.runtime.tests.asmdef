@@ -1,0 +1,18 @@
+{
+    "name": "crispy.eventbus.runtime.tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4dbde4d2affb52449ae44004fae2ac46"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

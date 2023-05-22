@@ -1,0 +1,8 @@
+{
+  "name": "com.crispy.eventbus",
+  "version": "1.0.0",
+  "displayName": "Crispy Event Bus",
+  "description": "A simple implementation of an Event Bus System",
+  "unity": "2021.3",
+  "type": "module"
+}
