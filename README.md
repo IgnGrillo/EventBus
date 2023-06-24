@@ -12,7 +12,7 @@ Remember that the emission only happens when you call the **Publish** method.
 
 Any methods previously subscribed, will be called in call order
 
-Finally, If you want, you can remove any subscriptions with the **Remove Subscription** method.\
+Finally, If you want, you can remove any subscriptions with the **Remove Subscription** method.
 
 Just remember to store the ID provided with the **Subscribe** method to provide the **Remove Subscription** call successfully.
 
@@ -20,25 +20,25 @@ Just remember to store the ID provided with the **Subscribe** method to provide 
 
 You can create a new Emitable class
 
-    private class OnPlayerInitialized : Emitable  
-    {  
-      public int Life { get; }  
-      public int Strength { get; }  
-      
-      public OnPlayerInitialized(int life, int strength)  
-     {  
-	     Life = life;  
-	     Strength = strength;  
-     }
-    }
+	private class OnPlayerInitialized : Emitable  
+	{  
+		public int Life { get; }  
+		public int Strength { get; }  
+	
+		public OnPlayerInitialized(int life, int strength)  
+		{  
+		     Life = life;  
+		     Strength = strength;  
+		}
+	}
 
 We can now proceed to create an action to receive all the OnPlayerInitialized emissions
 
-    var subscriptionGUID = EventBus.Subscribe<OnPlayerInitialized>(initialized => RefreshPlayersLifeUI(initialized.Life))
+	var subscriptionGUID = EventBus.Subscribe<OnPlayerInitialized>(initialized => RefreshPlayersLifeUI(initialized.Life))
 
 This way we are receiving the values provided when the function Published is called
 
-    EventBus.Publish(new OnPlayerInitialized(life: 100, strength: 10));
+	EventBus.Publish(new OnPlayerInitialized(life: 100, strength: 10));
 	
 Whenever we are done we can just call the RemoveSubscription method
 
